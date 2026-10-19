@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignment</title>
+</head>
+<body>
+
+    <h2>JavaScript Assignment - 8 Questions</h2>
+
+    <h3>Question 1: First and Last Name</h3>
+    <p id="q1"></p>
+
+    <h3>Question 2: Arithmetic Operations</h3>
+    <p id="q2"></p>
+
+    <h3>Question 3: Temperature Checker</h3>
+    <p id="q3"></p>
+
+    <h3>Question 4: Age Category</h3>
+    <p id="q4"></p>
+
+    <h3>Question 5: Electricity Bill Calculator</h3>
+    <p id="q5"></p>
+
+    <h3>Question 6: Traffic Light</h3>
+    <p id="q6"></p>
+
+    <h3>Question 7: Pocket Money Checker</h3>
+    <p id="q7"></p>
+
+    <h3>Question 8: Free Delivery Checker</h3>
+    <p id="q8"></p>
+
+    <script>
+        // Question 1: First and Last Name
+        let firstName = "Abdullah";
+        let lastName = "Khan";
+
+        let fullName = firstName + " " + lastName;
+
+        console.log("Question 1: First and Last Name");
+        console.log("Full Name: " + fullName);
+
+        document.getElementById("q1").textContent =
+            "Full Name: " + fullName;
+
+
+        // Question 2: Arithmetic Operations
+        let num1 = 10;
+        let num2 = 20;
+        let num3 = 30;
+
+        let addition = num1 + num2 + num3;
+        let subtraction = num1 - num2 - num3;
+        let multiplication = num1 * num2 * num3;
+        let division = num1 / num2 / num3;
+
+        console.log("Question 2: Arithmetic Operations");
+        console.log("Addition: " + addition);
+        console.log("Subtraction: " + subtraction);
+        console.log("Multiplication: " + multiplication);
+        console.log("Division: " + division);
+
+        document.getElementById("q2").textContent =
+            "Addition: " + addition +
+            " | Subtraction: " + subtraction +
+            " | Multiplication: " + multiplication +
+            " | Division: " + division;
+
+
+        // Question 3: Temperature Checker
+        let temp = Number(prompt("Q3: Enter temperature in Celsius:"));
+        let temperatureResult;
+
+        if (temp <= 0) {
+            temperatureResult = "Freezing";
+        } else {
+            temperatureResult = "Not freezing";
+        }
+
+        console.log("Question 3: Temperature Checker");
+        console.log(temperatureResult);
+
+        document.getElementById("q3").textContent =
+            temperatureResult;
+
+
+        // Question 4: Age Category
+        let age = Number(prompt("Q4: Enter your age:"));
+        let ageResult;
+
+        if (age < 0) {
+            ageResult = "Invalid Age";
+        } else if (age <= 12) {
+            ageResult = "Child";
+        } else if (age <= 19) {
+            ageResult = "Teenager";
+        } else if (age <= 59) {
+            ageResult = "Adult";
+        } else {
+            ageResult = "Senior Citizen";
+        }
+
+        console.log("Question 4: Age Category");
+        console.log(ageResult);
+
+        document.getElementById("q4").textContent =
+            ageResult;
+
+
+        // Question 5: Electricity Bill Calculator
+        let units = Number(prompt("Q5: Enter electricity units:"));
+        let bill = 0;
+        let billResult;
+
+        if (units < 0) {
+            billResult = "Invalid electricity units";
+        } else if (units <= 100) {
+            bill = units * 10;
+            billResult = "Total Bill: Rs. " + bill;
+        } else if (units <= 200) {
+            bill = (100 * 10) + ((units - 100) * 15);
+            billResult = "Total Bill: Rs. " + bill;
+        } else {
+            bill = (100 * 10) + (100 * 15) +
+                   ((units - 200) * 20);
+            billResult = "Total Bill: Rs. " + bill;
+        }
+
+        console.log("Question 5: Electricity Bill Calculator");
+        console.log(billResult);
+
+        document.getElementById("q5").textContent =
+            billResult;
+
+
+        // Question 6: Traffic Light
+        let color = prompt("Q6: Enter traffic light color:");
+        let trafficResult;
+
+        if (color === null) {
+            trafficResult = "Input cancelled";
+        } else {
+            color = color.trim().toLowerCase();
+
+            if (color === "red") {
+                trafficResult = "Stop";
+            } else if (color === "yellow") {
+                trafficResult = "Ready";
+            } else if (color === "green") {
+                trafficResult = "Go";
+            } else {
+                trafficResult = "Invalid Color";
+            }
+        }
+
+        console.log("Question 6: Traffic Light");
+        console.log(trafficResult);
+
+        document.getElementById("q6").textContent =
+            trafficResult;
+
+
+        // Question 7: Pocket Money Checker
+        let pocketMoney = Number(prompt("Q7: Enter pocket money:"));
+        let pocketResult;
+
+        if (pocketMoney > 500) {
+            pocketResult = "You can buy a gift";
+        } else {
+            pocketResult = "Save your money";
+        }
+
+        console.log("Question 7: Pocket Money Checker");
+        console.log(pocketResult);
+
+        document.getElementById("q7").textContent =
+            pocketResult;
+
+
+        // Question 8: Free Delivery Checker
+        let shoppingAmount = Number(
+            prompt("Q8: Enter total shopping amount:")
+        );
+
+        let deliveryResult;
+
+        if (shoppingAmount >= 2000) {
+            deliveryResult = "Free Delivery";
+        } else {
+            deliveryResult = "Delivery Charges Apply";
+        }
+
+        console.log("Question 8: Free Delivery Checker");
+        console.log(deliveryResult);
+
+        document.getElementById("q8").textContent =
+            deliveryResult;
+
+    </script>
+
+</body>
+</html>
